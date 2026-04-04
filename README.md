@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 🌤️ Weather App (Modern Dashboard)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sophisticated weather application with a modern user interface, supporting all 27 Egyptian governorates and providing accurate real-time data using the latest React features and REST APIs.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📸 Preview
 
-### `npm start`
+### 🌓 Modern Solid Design
+![Homescreen](./assets/Homescreen.png)
+*Professional dark-themed UI (Solid) inspired by the latest design trends.*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- 🌍 **Full Egypt Support:** Includes all 27 Egyptian governorates with precise coordinates.
+- 🏢 **Dynamic Selection:** Choose a Country (Egypt, Saudi Arabia, UAE, etc.) and then select its associated City.
+- 🌡️ **Accurate Data:** Displays Current, Min, and Max temperatures (calculated precisely from daily forecasts).
+- 💧 **Detailed Insights:** Humidity, Wind Speed, and "Feels Like" thermal information.
+- 🌐 **Multi-language Support (i18n):** Seamless switching between Arabic and English with full RTL/LTR layout support.
+- 🕒 **Live Clock:** Displays the current date and time, updating automatically every second.
+- 📱 **Responsive Design:** A fluid interface that works efficiently across all screen sizes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React.js (v19):** Core framework for component and state management.
+- **Material UI (MUI):** For interactive components and selectors.
+- **Vanilla CSS:** Custom styling for the Modern Solid UI and gradients.
+- **Axios:** For daily REST API communication and data retrieval.
+- **OpenWeatherMap API:** The primary source for weather data (Current & Forecast).
+- **i18next:** For translation and multi-language support.
+- **Moment.js:** For handling dates, times, and localization.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+To run the project locally, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository:**
+   ```bash
+   git clone <repo-url>
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start the application:**
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📡 API Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We use two separate endpoints to ensure the highest data accuracy:
+*   `/weather` for instantaneous live data (humidity, wind, description).
+*   `/forecast` to calculate the actual minimum and maximum temperatures expected within the next 24 hours.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🎨 Typography
+The **IBM Plex Sans Arabic** font from Google Fonts was used for a professional and clear reading experience in both Arabic and English.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Developed by:
+**[User Name]** - 2026 🚀
