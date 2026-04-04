@@ -7,9 +7,7 @@ A sophisticated weather application with a modern user interface, supporting all
 ## 📸 Preview
 
 ### 🌓 Modern Solid Design
-![Homescreen](./assets/Homescreen.png)
-*Professional dark-themed UI (Solid) inspired by the latest design trends.*
-
+![Homescreen](./public/Screenshot%202026-04-04%20235426.png)
 ---
 
 ## ✨ Features
@@ -71,4 +69,4 @@ The **IBM Plex Sans Arabic** font from Google Fonts was used for a professional 
 ---
 
 ### Developed by:
-**[User Name]** - 2026 🚀
+**[Ahmed elsayed]** - 2026 🚀
