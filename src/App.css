@@ -29,32 +29,32 @@ body {
   font-family: IBM;
 }
 
-/* ===== Glass Select (now: Solid Select) ===== */
-.glass-select {
+/* ===== Solid Select ===== */
+.solid-select {
   background-color: #1e293b !important;
   border-radius: 10px !important;
   color: white !important;
   font-family: IBM !important;
 }
 
-.glass-select .MuiOutlinedInput-notchedOutline {
+.solid-select .MuiOutlinedInput-notchedOutline {
   border: 2px solid #334155 !important;
   border-radius: 10px !important;
 }
 
-.glass-select:hover .MuiOutlinedInput-notchedOutline {
+.solid-select:hover .MuiOutlinedInput-notchedOutline {
   border-color: #3b82f6 !important;
 }
 
-.glass-select.Mui-focused .MuiOutlinedInput-notchedOutline {
+.solid-select.Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: #3b82f6 !important;
 }
 
-.glass-select .MuiSelect-icon {
+.solid-select .MuiSelect-icon {
   color: #64748b !important;
 }
 
-.glass-select .MuiSelect-select {
+.solid-select .MuiSelect-select {
   color: white !important;
   font-family: IBM !important;
   padding: 12px 14px !important;
@@ -75,17 +75,6 @@ body {
   border: 1px solid #334155;
   position: relative;
   overflow: hidden;
-}
-
-/* Top accent bar */
-.weather-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #06b6d4, #8b5cf6);
 }
 
 /* ===== Card Divider ===== */
