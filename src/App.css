@@ -1,11 +1,9 @@
-/* ===== Reset ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ===== Background ===== */
 body {
   background-color: #0f172a !important;
   min-height: 100vh;
@@ -17,7 +15,6 @@ body {
   min-height: 100vh;
 }
 
-/* ===== Selectors Row ===== */
 .selectors-row label {
   font-size: 12px;
   font-weight: 600;
@@ -29,7 +26,6 @@ body {
   font-family: IBM;
 }
 
-/* ===== Solid Select ===== */
 .solid-select {
   background-color: #1e293b !important;
   border-radius: 10px !important;
@@ -66,7 +62,6 @@ body {
   font-size: 14px !important;
 }
 
-/* ===== Weather Card ===== */
 .weather-card {
   background-color: #1e293b;
   border-radius: 20px;
@@ -77,14 +72,12 @@ body {
   overflow: hidden;
 }
 
-/* ===== Card Divider ===== */
 .card-divider {
   height: 1px;
   background-color: #334155;
   margin: 20px 0;
 }
 
-/* ===== Extra Info Row ===== */
 .extra-info-row {
   display: flex;
   gap: 12px;
@@ -132,7 +125,6 @@ body {
   font-family: IBM;
 }
 
-/* ===== Min / Max Badges ===== */
 .temp-badge {
   font-size: 13px;
   font-weight: 600;
@@ -151,7 +143,6 @@ body {
   color: #fde68a;
 }
 
-/* ===== Language Button ===== */
 .lang-btn {
   color: #94a3b8 !important;
   border-color: #334155 !important;
@@ -170,7 +161,6 @@ body {
   color: #f1f5f9 !important;
 }
 
-/* ===== IBM Font Faces ===== */
 @font-face {
   font-family: IBM;
   src: url("/public/Fonts/IBM/IBMPlexSansArabic-Regular.ttf");

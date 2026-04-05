@@ -7,7 +7,6 @@ import moment from 'moment';
 import "moment/min/locales";
 import { useTranslation } from 'react-i18next';
 
-// Material UI components
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -22,7 +21,6 @@ const theme = createTheme({
   },
 });
 
-// --- بيانات الدول والمدن ---
 const countriesData = [
   {
     code: "EG",
@@ -285,7 +283,6 @@ function App() {
 
   const [dateandtime, setDateTime] = useState("");
 
-  // --- تغيير اللغة ---
   function handleLangToggle() {
     const newLang = locale === "ar" ? "en" : "ar";
     setLocale(newLang);
@@ -293,20 +290,17 @@ function App() {
     moment.locale(newLang);
   }
 
-  // --- تغيير الدولة ---
   function handleCountryChange(e) {
     const country = countriesData.find((c) => c.code === e.target.value);
     setSelectedCountry(country);
     setSelectedCity(country.cities[0]);
   }
 
-  // --- تغيير المدينة ---
   function handleCityChange(e) {
     const city = selectedCountry.cities.find((c) => c.nameEn === e.target.value);
     setSelectedCity(city);
   }
 
-  // --- ساعة الوقت ---
   useEffect(() => {
     i18n.changeLanguage("ar");
     moment.locale("ar");
@@ -317,7 +311,6 @@ function App() {
     return () => clearInterval(timer);
   }, []);
 
-  // --- جلب بيانات الطقس ---
   useEffect(() => {
     if (!selectedCity) return;
 
@@ -338,7 +331,6 @@ function App() {
       axios.get(forecastUrl),
     ])
       .then(([currentRes, forecastRes]) => {
-        // --- بيانات الطقس الحالي ---
         const currentTemp = Math.round(currentRes.data.main.temp - 272.15);
         const description = currentRes.data.weather[0].description;
         const icon        = currentRes.data.weather[0].icon;
@@ -346,8 +338,7 @@ function App() {
         const windSpeed   = Math.round(currentRes.data.wind.speed * 3.6);
         const feelsLike   = Math.round(currentRes.data.main.feels_like - 272.15);
 
-        // --- حساب الـ min/max الحقيقية من توقعات اليوم ---
-        const todayDate = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+        const todayDate = new Date().toISOString().slice(0, 10);
         const todayEntries = forecastRes.data.list.filter((entry) =>
           entry.dt_txt.startsWith(todayDate)
         );
@@ -358,7 +349,6 @@ function App() {
           tempMin = Math.min(...temps);
           tempMax = Math.max(...temps);
         } else {
-          // لو مفيش بيانات لليوم (نادراً) استخدم كل بيانات الـ 24 ساعة الجاية
           const next8 = forecastRes.data.list.slice(0, 8);
           const temps = next8.map((e) => Math.round(e.main.temp - 272.15));
           tempMin = Math.min(...temps);
@@ -402,7 +392,6 @@ function App() {
               padding: "20px 0",
             }}
           >
-            {/* ===== Selectors Row ===== */}
             <div
               className="selectors-row"
               dir={direction}
@@ -414,7 +403,6 @@ function App() {
                 flexWrap: "wrap",
               }}
             >
-              {/* Country Selector */}
               <FormControl
                 variant="outlined"
                 style={{ flex: 1, minWidth: "140px" }}
@@ -456,7 +444,6 @@ function App() {
                 </Select>
               </FormControl>
 
-              {/* City Selector */}
               <FormControl
                 variant="outlined"
                 style={{ flex: 1, minWidth: "140px" }}
@@ -499,7 +486,6 @@ function App() {
               </FormControl>
             </div>
 
-            {/* ===== Weather Card ===== */}
             <div className="weather-card">
               {loading ? (
                 <div
@@ -521,7 +507,6 @@ function App() {
                 </Typography>
               ) : weatherData ? (
                 <div dir={direction}>
-                  {/* City Name + Date */}
                   <div
                     style={{
                       display: "flex",
@@ -559,7 +544,6 @@ function App() {
 
                   <div className="card-divider" />
 
-                  {/* Temp + Icon */}
                   <div
                     style={{
                       display: "flex",
@@ -582,7 +566,6 @@ function App() {
                       />
                     </div>
 
-                    {/* Description + Min/Max */}
                     <div style={{ textAlign: direction === "rtl" ? "left" : "right" }}>
                       <Typography
                         variant="h6"
@@ -606,7 +589,6 @@ function App() {
                     </div>
                   </div>
 
-                  {/* Extra Info Row */}
                   <div className="extra-info-row">
                     <div className="info-chip">
                       <span className="info-icon">💧</span>
@@ -641,9 +623,7 @@ function App() {
                 </div>
               ) : null}
             </div>
-            {/* ===== End Weather Card ===== */}
 
-            {/* Language Toggle */}
             <div
               style={{
                 display: "flex",
