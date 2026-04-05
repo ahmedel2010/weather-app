@@ -69,4 +69,4 @@ The **IBM Plex Sans Arabic** font from Google Fonts was used for a professional 
 ---
 
 ### Developed by:
-**[Ahmed elsayed]** - 2026 🚀
+**Ahmed elsayed** - 2026 🚀
