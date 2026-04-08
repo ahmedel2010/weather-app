@@ -1,0 +1,274 @@
+import { Continent } from '../types/weather.types';
+
+const continentsData: Continent[] = [
+  {
+    code: 'AFRICA',
+    nameAr: 'أفريقيا',
+    nameEn: 'Africa',
+    countries: [
+      {
+        code: 'EG',
+        nameAr: 'مصر',
+        nameEn: 'Egypt',
+        cities: [
+          { nameAr: 'القاهرة',        nameEn: 'Cairo',         lat: 30.0626, lon: 31.2497 },
+          { nameAr: 'الإسكندرية',    nameEn: 'Alexandria',     lat: 31.2001, lon: 29.9187 },
+          { nameAr: 'الجيزة',        nameEn: 'Giza',           lat: 30.0131, lon: 31.2089 },
+          { nameAr: 'القليوبية',     nameEn: 'Qalyubia',       lat: 30.4618, lon: 31.1841 },
+          { nameAr: 'الشرقية',       nameEn: 'Sharqia',        lat: 30.5877, lon: 31.5021 },
+          { nameAr: 'الغربية',       nameEn: 'Gharbia',        lat: 30.7865, lon: 30.9974 },
+          { nameAr: 'المنوفية',      nameEn: 'Monufia',        lat: 30.5569, lon: 30.9625 },
+          { nameAr: 'البحيرة',       nameEn: 'Beheira',        lat: 31.0343, lon: 30.4685 },
+          { nameAr: 'الدقهلية',      nameEn: 'Dakahlia',       lat: 31.0409, lon: 31.3785 },
+          { nameAr: 'دمياط',         nameEn: 'Damietta',       lat: 31.4165, lon: 31.8133 },
+          { nameAr: 'كفر الشيخ',    nameEn: 'Kafr El-Sheikh', lat: 31.1107, lon: 30.9388 },
+          { nameAr: 'الإسماعيلية',   nameEn: 'Ismailia',       lat: 30.5965, lon: 32.2715 },
+          { nameAr: 'بورسعيد',       nameEn: 'Port Said',      lat: 31.2565, lon: 32.2841 },
+          { nameAr: 'السويس',        nameEn: 'Suez',           lat: 29.9668, lon: 32.5498 },
+          { nameAr: 'شمال سيناء',   nameEn: 'North Sinai',    lat: 31.1302, lon: 33.7985 },
+          { nameAr: 'جنوب سيناء',   nameEn: 'South Sinai',    lat: 28.5396, lon: 33.6128 },
+          { nameAr: 'الفيوم',        nameEn: 'Faiyum',         lat: 29.3084, lon: 30.8428 },
+          { nameAr: 'بني سويف',     nameEn: 'Beni Suef',      lat: 29.0661, lon: 31.0994 },
+          { nameAr: 'المنيا',        nameEn: 'Minya',          lat: 28.0871, lon: 30.7618 },
+          { nameAr: 'أسيوط',        nameEn: 'Asyut',          lat: 27.1809, lon: 31.1837 },
+          { nameAr: 'سوهاج',        nameEn: 'Sohag',          lat: 26.5561, lon: 31.6948 },
+          { nameAr: 'قنا',           nameEn: 'Qena',           lat: 26.1551, lon: 32.7160 },
+          { nameAr: 'الأقصر',       nameEn: 'Luxor',          lat: 25.6872, lon: 32.6396 },
+          { nameAr: 'أسوان',        nameEn: 'Aswan',          lat: 24.0889, lon: 32.8998 },
+          { nameAr: 'البحر الأحمر', nameEn: 'Red Sea',        lat: 27.2579, lon: 33.8116 },
+          { nameAr: 'الوادي الجديد',nameEn: 'New Valley',     lat: 25.4333, lon: 30.5500 },
+          { nameAr: 'مطروح',        nameEn: 'Matrouh',        lat: 31.3543, lon: 27.2373 },
+        ],
+      },
+      {
+        code: 'MA',
+        nameAr: 'المغرب',
+        nameEn: 'Morocco',
+        cities: [
+          { nameAr: 'الرباط',         nameEn: 'Rabat',       lat: 34.0132, lon: -6.8326 },
+          { nameAr: 'الدار البيضاء',  nameEn: 'Casablanca',  lat: 33.5731, lon: -7.5898 },
+          { nameAr: 'مراكش',          nameEn: 'Marrakech',   lat: 31.6295, lon: -7.9811 },
+          { nameAr: 'فاس',            nameEn: 'Fes',         lat: 34.0181, lon: -5.0078 },
+          { nameAr: 'طنجة',           nameEn: 'Tangier',     lat: 35.7595, lon: -5.834  },
+        ],
+      },
+      {
+        code: 'TN',
+        nameAr: 'تونس',
+        nameEn: 'Tunisia',
+        cities: [
+          { nameAr: 'تونس',     nameEn: 'Tunis',    lat: 36.8065, lon: 10.1815 },
+          { nameAr: 'صفاقس',   nameEn: 'Sfax',     lat: 34.7398, lon: 10.7601 },
+          { nameAr: 'سوسة',    nameEn: 'Sousse',   lat: 35.8245, lon: 10.638  },
+          { nameAr: 'القيروان',nameEn: 'Kairouan', lat: 35.6712, lon: 10.1005 },
+        ],
+      },
+      {
+        code: 'DZ',
+        nameAr: 'الجزائر',
+        nameEn: 'Algeria',
+        cities: [
+          { nameAr: 'الجزائر',  nameEn: 'Algiers',     lat: 36.7538, lon:  3.0588 },
+          { nameAr: 'وهران',   nameEn: 'Oran',         lat: 35.6971, lon: -0.6308 },
+          { nameAr: 'قسنطينة', nameEn: 'Constantine',  lat: 36.3650, lon:  6.6147 },
+        ],
+      },
+      {
+        code: 'LY',
+        nameAr: 'ليبيا',
+        nameEn: 'Libya',
+        cities: [
+          { nameAr: 'طرابلس', nameEn: 'Tripoli',  lat: 32.8872, lon: 13.1913 },
+          { nameAr: 'بنغازي', nameEn: 'Benghazi', lat: 32.1167, lon: 20.0667 },
+        ],
+      },
+    ],
+  },
+  {
+    code: 'ASIA',
+    nameAr: 'آسيا',
+    nameEn: 'Asia',
+    countries: [
+      {
+        code: 'SA',
+        nameAr: 'المملكة العربية السعودية',
+        nameEn: 'Saudi Arabia',
+        cities: [
+          { nameAr: 'الرياض',          nameEn: 'Riyadh', lat: 24.6877, lon: 46.7219 },
+          { nameAr: 'جدة',             nameEn: 'Jeddah', lat: 21.5433, lon: 39.1728 },
+          { nameAr: 'مكة المكرمة',    nameEn: 'Mecca',  lat: 21.3891, lon: 39.8579 },
+          { nameAr: 'المدينة المنورة', nameEn: 'Medina', lat: 24.5247, lon: 39.5692 },
+          { nameAr: 'الدمام',          nameEn: 'Dammam', lat: 26.4207, lon: 50.0888 },
+          { nameAr: 'الطائف',          nameEn: 'Taif',   lat: 21.2854, lon: 40.4144 },
+          { nameAr: 'تبوك',            nameEn: 'Tabuk',  lat: 28.3998, lon: 36.5717 },
+        ],
+      },
+      {
+        code: 'AE',
+        nameAr: 'الإمارات العربية المتحدة',
+        nameEn: 'UAE',
+        cities: [
+          { nameAr: 'دبي',        nameEn: 'Dubai',         lat: 25.2048, lon: 55.2708 },
+          { nameAr: 'أبوظبي',    nameEn: 'Abu Dhabi',     lat: 24.4539, lon: 54.3773 },
+          { nameAr: 'الشارقة',   nameEn: 'Sharjah',       lat: 25.3573, lon: 55.4033 },
+          { nameAr: 'العين',     nameEn: 'Al Ain',        lat: 24.2075, lon: 55.7447 },
+          { nameAr: 'رأس الخيمة',nameEn: 'Ras Al Khaimah',lat: 25.7895, lon: 55.9432 },
+        ],
+      },
+      {
+        code: 'KW',
+        nameAr: 'الكويت',
+        nameEn: 'Kuwait',
+        cities: [
+          { nameAr: 'مدينة الكويت', nameEn: 'Kuwait City', lat: 29.3697, lon: 47.9783 },
+          { nameAr: 'الجهراء',      nameEn: 'Jahra',       lat: 29.3378, lon: 47.6581 },
+          { nameAr: 'السالمية',     nameEn: 'Salmiya',     lat: 29.3399, lon: 48.0763 },
+          { nameAr: 'الأحمدي',     nameEn: 'Ahmadi',      lat: 29.0769, lon: 48.0838 },
+        ],
+      },
+      {
+        code: 'QA',
+        nameAr: 'قطر',
+        nameEn: 'Qatar',
+        cities: [
+          { nameAr: 'الدوحة',  nameEn: 'Doha',      lat: 25.2854, lon: 51.5310 },
+          { nameAr: 'الريان', nameEn: 'Al Rayyan', lat: 25.2921, lon: 51.4428 },
+          { nameAr: 'الوكرة', nameEn: 'Al Wakrah', lat: 25.1768, lon: 51.6042 },
+        ],
+      },
+      {
+        code: 'BH',
+        nameAr: 'البحرين',
+        nameEn: 'Bahrain',
+        cities: [
+          { nameAr: 'المنامة', nameEn: 'Manama',    lat: 26.2285, lon: 50.5860 },
+          { nameAr: 'المحرق', nameEn: 'Muharraq',  lat: 26.2558, lon: 50.6120 },
+        ],
+      },
+      {
+        code: 'OM',
+        nameAr: 'سلطنة عمان',
+        nameEn: 'Oman',
+        cities: [
+          { nameAr: 'مسقط',  nameEn: 'Muscat',  lat: 23.5859, lon: 58.4059 },
+          { nameAr: 'صلالة', nameEn: 'Salalah', lat: 17.0151, lon: 54.0924 },
+          { nameAr: 'صحار',  nameEn: 'Sohar',   lat: 24.3461, lon: 56.7414 },
+        ],
+      },
+      {
+        code: 'JO',
+        nameAr: 'الأردن',
+        nameEn: 'Jordan',
+        cities: [
+          { nameAr: 'عمّان',   nameEn: 'Amman',  lat: 31.9539, lon: 35.9106 },
+          { nameAr: 'الزرقاء', nameEn: 'Zarqa',  lat: 32.0728, lon: 36.0878 },
+          { nameAr: 'إربد',    nameEn: 'Irbid',  lat: 32.5556, lon: 35.85   },
+          { nameAr: 'العقبة',  nameEn: 'Aqaba',  lat: 29.5321, lon: 35.0063 },
+        ],
+      },
+      {
+        code: 'LB',
+        nameAr: 'لبنان',
+        nameEn: 'Lebanon',
+        cities: [
+          { nameAr: 'بيروت',   nameEn: 'Beirut',  lat: 33.8938, lon: 35.5018 },
+          { nameAr: 'طرابلس',  nameEn: 'Tripoli', lat: 34.4367, lon: 35.8497 },
+          { nameAr: 'صيدا',    nameEn: 'Sidon',   lat: 33.5571, lon: 35.3729 },
+          { nameAr: 'صور',     nameEn: 'Tyre',    lat: 33.2705, lon: 35.2038 },
+        ],
+      },
+      {
+        code: 'PS',
+        nameAr: 'فلسطين',
+        nameEn: 'Palestine',
+        cities: [
+          { nameAr: 'القدس',    nameEn: 'Jerusalem', lat: 31.7683, lon: 35.2137 },
+          { nameAr: 'غزة',      nameEn: 'Gaza',      lat: 31.5017, lon: 34.4667 },
+          { nameAr: 'رام الله', nameEn: 'Ramallah',  lat: 31.9029, lon: 35.2043 },
+        ],
+      },
+      {
+        code: 'IQ',
+        nameAr: 'العراق',
+        nameEn: 'Iraq',
+        cities: [
+          { nameAr: 'بغداد',  nameEn: 'Baghdad', lat: 33.3152, lon: 44.3661 },
+          { nameAr: 'البصرة', nameEn: 'Basra',   lat: 30.5081, lon: 47.7835 },
+          { nameAr: 'أربيل',  nameEn: 'Erbil',   lat: 36.1911, lon: 44.0094 },
+        ],
+      },
+      {
+        code: 'TR',
+        nameAr: 'تركيا',
+        nameEn: 'Turkey',
+        cities: [
+          { nameAr: 'إسطنبول', nameEn: 'Istanbul', lat: 41.0082, lon: 28.9784 },
+          { nameAr: 'أنقرة',   nameEn: 'Ankara',   lat: 39.9334, lon: 32.8597 },
+        ],
+      },
+      {
+        code: 'RU_ASIA',
+        nameAr: 'روسيا',
+        nameEn: 'Russia',
+        cities: [
+          { nameAr: 'موسكو',         nameEn: 'Moscow',           lat: 55.7558, lon: 37.6173 },
+          { nameAr: 'سان بطرسبرج',  nameEn: 'Saint Petersburg', lat: 59.9311, lon: 30.3609 },
+          { nameAr: 'نوفوسيبيرسك', nameEn: 'Novosibirsk',      lat: 55.0084, lon: 82.9357 },
+        ],
+      },
+    ],
+  },
+  {
+    code: 'EUROPE',
+    nameAr: 'أوروبا',
+    nameEn: 'Europe',
+    countries: [
+      {
+        code: 'GB',
+        nameAr: 'المملكة المتحدة',
+        nameEn: 'United Kingdom',
+        cities: [
+          { nameAr: 'لندن',      nameEn: 'London',     lat: 51.5074, lon: -0.1278 },
+          { nameAr: 'مانشستر', nameEn: 'Manchester',  lat: 53.4808, lon: -2.2426 },
+        ],
+      },
+      {
+        code: 'FR',
+        nameAr: 'فرنسا',
+        nameEn: 'France',
+        cities: [
+          { nameAr: 'باريس', nameEn: 'Paris', lat: 48.8566, lon: 2.3522 },
+          { nameAr: 'ليون',  nameEn: 'Lyon',  lat: 45.7640, lon: 4.8357 },
+        ],
+      },
+      {
+        code: 'DE',
+        nameAr: 'ألمانيا',
+        nameEn: 'Germany',
+        cities: [
+          { nameAr: 'برلين',  nameEn: 'Berlin', lat: 52.5200, lon: 13.4050 },
+          { nameAr: 'ميونخ', nameEn: 'Munich', lat: 48.1351, lon: 11.5820 },
+        ],
+      },
+    ],
+  },
+  {
+    code: 'AMERICAS',
+    nameAr: 'الأمريكتان',
+    nameEn: 'Americas',
+    countries: [
+      {
+        code: 'US',
+        nameAr: 'الولايات المتحدة',
+        nameEn: 'USA',
+        cities: [
+          { nameAr: 'نيويورك',      nameEn: 'New York',     lat: 40.7128, lon:  -74.0060  },
+          { nameAr: 'لوس أنجلوس',  nameEn: 'Los Angeles',  lat: 34.0522, lon: -118.2437  },
+          { nameAr: 'شيكاغو',       nameEn: 'Chicago',      lat: 41.8781, lon:  -87.6298  },
+        ],
+      },
+    ],
+  },
+];
+
+export default continentsData;

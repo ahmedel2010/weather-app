@@ -1,3 +1,4 @@
+/* ─── Reset ──────────────────────────────────────────────────────────────── */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,22 +11,14 @@ body {
   font-family: IBM, sans-serif;
 }
 
+/* ─── Layout ─────────────────────────────────────────────────────────────── */
 .App {
   text-align: center;
   min-height: 100vh;
 }
 
-.selectors-row label {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #64748b;
-  margin-bottom: 8px;
-  display: block;
-  font-family: IBM;
-}
 
+/* ─── MUI Select ─────────────────────────────────────────────────────────── */
 .solid-select {
   background-color: #1e293b !important;
   border-radius: 10px !important;
@@ -62,22 +55,14 @@ body {
   font-size: 14px !important;
 }
 
-.weather-card {
-  background-color: #1e293b;
-  border-radius: 20px;
-  padding: 28px 24px;
-  width: 100%;
-  border: 1px solid #334155;
-  position: relative;
-  overflow: hidden;
-}
-
+/* ─── Divider ────────────────────────────────────────────────────────────── */
 .card-divider {
   height: 1px;
   background-color: #334155;
   margin: 20px 0;
 }
 
+/* ─── Info Chips ─────────────────────────────────────────────────────────── */
 .extra-info-row {
   display: flex;
   gap: 12px;
@@ -111,7 +96,7 @@ body {
 .info-label {
   font-size: 11px;
   color: #64748b;
-  font-family: IBM;
+  font-family: IBM, sans-serif;
   margin-bottom: 3px;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -122,15 +107,16 @@ body {
   font-size: 17px;
   font-weight: 700;
   color: #f1f5f9;
-  font-family: IBM;
+  font-family: IBM, sans-serif;
 }
 
+/* ─── Temperature Badges ─────────────────────────────────────────────────── */
 .temp-badge {
   font-size: 13px;
   font-weight: 600;
   padding: 4px 12px;
   border-radius: 20px;
-  font-family: IBM;
+  font-family: IBM, sans-serif;
 }
 
 .temp-badge.min {
@@ -143,6 +129,7 @@ body {
   color: #fde68a;
 }
 
+/* ─── Language Button ────────────────────────────────────────────────────── */
 .lang-btn {
   color: #94a3b8 !important;
   border-color: #334155 !important;
@@ -161,26 +148,27 @@ body {
   color: #f1f5f9 !important;
 }
 
+/* ─── Fonts ──────────────────────────────────────────────────────────────── */
 @font-face {
   font-family: IBM;
-  src: url("/public/Fonts/IBM/IBMPlexSansArabic-Regular.ttf");
+  src: url('../../public/Fonts/IBM/IBMPlexSansArabic-Regular.ttf');
   font-weight: 500;
 }
 
 @font-face {
   font-family: IBM;
-  src: url("/public/Fonts/IBM/IBMPlexSansArabic-Light.ttf");
+  src: url('../../public/Fonts/IBM/IBMPlexSansArabic-Light.ttf');
   font-weight: 400;
 }
 
 @font-face {
   font-family: IBM;
-  src: url("/public/Fonts/IBM/IBMPlexSansArabic-Medium.ttf");
+  src: url('../../public/Fonts/IBM/IBMPlexSansArabic-Medium.ttf');
   font-weight: 600;
 }
 
 @font-face {
   font-family: IBM;
-  src: url("/public/Fonts/IBM/IBMPlexSansArabic-Bold.ttf");
+  src: url('../../public/Fonts/IBM/IBMPlexSansArabic-Bold.ttf');
   font-weight: 700;
 }
